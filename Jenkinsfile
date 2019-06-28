@@ -4,7 +4,6 @@ node {
    }
    stage('build') {
       sh '''
-	 sudo apt-get update && sudo apt-get install maven -y
          mvn clean package
          cd target
          cp ../src/main/resources/web.config web.config
